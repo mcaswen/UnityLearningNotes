@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unity中的DOTS/1. ECS 总览.md",
+                "file": "Unity中的DOTS/2. Job System.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. ECS 总览"
+              "title": "2. Job System"
             }
           }
         ]
@@ -168,9 +168,11 @@
   },
   "active": "fed79e7d6c11c163",
   "lastOpenFiles": [
+    "数据导向技术栈-电子书/02 关于性能.md",
+    "Unity中的DOTS/1. ECS 总览.md",
+    "Unity中的DOTS/2. Job System.md",
     "未命名.base",
     "Untitled.md",
-    "Unity中的DOTS/1. ECS 总览.md",
     "数据导向技术栈-电子书/09 Streaming, ECS Samples 总览  与 Entities Graphics.md",
     "Unity中的DOTS",
     "未命名.md",
@@ -179,7 +181,6 @@
     "数据导向技术栈-电子书/06 Entities 与 Archetypes.md",
     "数据导向技术栈-电子书/04 Burst 编译器.md",
     "数据导向技术栈-电子书/05 集合库与数学库.md",
-    "数据导向技术栈-电子书/02 关于性能.md",
     "数据导向技术栈-电子书/03 DOTS 与 ECS 概览 和 Job System.md",
     "数据导向技术栈-电子书/12 Roadmap & Evaluation For DOTS.md",
     "数据导向技术栈-电子书/11 N4E 与 Character Controller.md",
