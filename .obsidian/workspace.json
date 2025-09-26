@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "60e8e75032b0a153",
+    "type": "split",
+    "children": [
+      {
+        "id": "13708f651c42d07d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e40fc2abdde93060",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.7 全局光照系统 GI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.7 全局光照系统 GI"
+            }
+          },
+          {
+            "id": "22118809152464f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.7 全局光照系统 GI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.7 全局光照系统 GI"
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bde1ec0e825a92a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "e16931ee97b1520e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f76e6042c4b70146",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "aa379d23959ed74d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "6e5ac669a7d43947",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8813674c2b41bc4a",
+    "type": "split",
+    "children": [
+      {
+        "id": "ad562227e67d56cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dfbfd11b0de4e3e9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/2. Job System.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2. Job System 的反向链接列表"
+            }
+          },
+          {
+            "id": "3f214e2104ac9876",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/2. Job System.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2. Job System 的出链列表"
+            }
+          },
+          {
+            "id": "35f92788d1043d6b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "f4b196f5f097c54e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/2. Job System.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2. Job System 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
+    }
+  },
+  "active": "e40fc2abdde93060",
+  "lastOpenFiles": [
+    "游戏引擎原理及其应用-笔记/未命名.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.7 全局光照系统 GI.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.5 实时阴影.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.8 光照探针 Probe.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.4 灯光.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.6 材质系统.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课/游戏物体外观.md",
+    "README.md",
+    "未命名.canvas",
+    "DOTS/Unity中的DOTS/2. Job System.md",
+    "2025-09-26.md",
+    "游戏引擎原理及其应用-笔记/第1章 游戏引擎基础/理论课/1.5 简单脚本编程.md",
+    "游戏引擎原理及其应用-笔记/第1章 游戏引擎基础/理论课/1.2 Unity游戏引擎简介.md",
+    "游戏引擎原理及其应用-笔记/第1章 游戏引擎基础/理论课/1.3 地形系统.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.0 渲染管线.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.1 性能审查.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.2 代码优化.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.4 渲染优化.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.3 内存管理.md",
+    "游戏引擎原理及其应用-笔记/第1章 游戏引擎基础/理论课/1.1 概述.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.2 颜色空间.md",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.1 渲染路径.md",
+    "DOTS/Unity中的DOTS/1. ECS 总览.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化",
+    "未命名"
+  ]
+}
