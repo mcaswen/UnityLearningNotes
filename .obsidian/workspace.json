@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOTS/Unity中的DOTS/3. Burst Compiler.md",
+                "file": "DOTS/Unity中的DOTS/4. Mathematics 数学库.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Burst Compiler"
+              "title": "4. Mathematics 数学库"
             }
           },
           {
@@ -187,9 +187,12 @@
   "active": "e40fc2abdde93060",
   "lastOpenFiles": [
     "DOTS/Unity中的DOTS/1. ECS 总览.md",
+    "DOTS/Unity中的DOTS/4. Mathematics 数学库.md",
+    "DOTS/Unity中的DOTS/Unity中的ECS",
+    "DOTS/Unity中的DOTS/未命名.md",
     "DOTS/Unity中的DOTS/3. Burst Compiler.md",
-    "DOTS/数据导向技术栈-电子书/11 N4E 与 Character Controller.md",
     "DOTS/Unity中的DOTS/2. Job System.md",
+    "DOTS/数据导向技术栈-电子书/11 N4E 与 Character Controller.md",
     "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.4 Cinemachine.md",
     "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.3 脚本控制.md",
     "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.2 动画.md",
@@ -211,9 +214,6 @@
     "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.1 渲染路径.md",
     "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.0 渲染管线.md",
     "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.5 实时阴影.md",
-    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.6 材质系统.md",
-    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.8 光照探针 Probe.md",
-    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.4 灯光.md",
     "未命名.canvas",
     "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课",
     "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课",
