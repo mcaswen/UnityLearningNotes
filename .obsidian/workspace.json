@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOTS/Unity中的DOTS/4. Mathematics 数学库.md",
+                "file": "游戏引擎原理及其应用-笔记/第8章 人工智能/8.1 自动寻路.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. Mathematics 数学库"
+              "title": "8.1 自动寻路"
             }
           },
           {
@@ -59,7 +59,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -175,19 +175,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
   "active": "e40fc2abdde93060",
   "lastOpenFiles": [
-    "DOTS/Unity中的DOTS/1. ECS 总览.md",
     "DOTS/Unity中的DOTS/4. Mathematics 数学库.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.1 自动寻路.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能",
+    "DOTS/Unity中的DOTS/1. ECS 总览.md",
     "DOTS/Unity中的DOTS/Unity中的ECS",
     "DOTS/Unity中的DOTS/未命名.md",
     "DOTS/Unity中的DOTS/3. Burst Compiler.md",
