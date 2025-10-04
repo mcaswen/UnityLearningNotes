@@ -1,56 +1,56 @@
 {
   "main": {
-    "id": "60e8e75032b0a153",
+    "id": "a1ca2cad89d4ac8d",
     "type": "split",
     "children": [
       {
-        "id": "13708f651c42d07d",
+        "id": "49cfd98430ea408b",
         "type": "tabs",
         "children": [
           {
-            "id": "e40fc2abdde93060",
+            "id": "5b688bbdb81a3c7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.2 粒子系统.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.2 粒子系统"
+              "title": "1. 服务端"
             }
           },
           {
-            "id": "22118809152464f9",
+            "id": "e194d42921cc0b7c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第7章 物理系统/7.5 浮力效果.md",
+                "file": "游戏开发中的网络同步/4. 帧同步.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7.5 浮力效果"
+              "title": "4. 帧同步"
             }
           }
         ],
-        "stacked": true
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "bde1ec0e825a92a1",
+    "id": "6634587251ecbfed",
     "type": "split",
     "children": [
       {
-        "id": "e16931ee97b1520e",
+        "id": "a1c1a4c4315ee396",
         "type": "tabs",
         "children": [
           {
-            "id": "f76e6042c4b70146",
+            "id": "d8403abc74b42ff3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -59,11 +59,11 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
-            "id": "aa379d23959ed74d",
+            "id": "348c69fc5ea54d96",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -80,7 +80,7 @@
             }
           },
           {
-            "id": "6e5ac669a7d43947",
+            "id": "7ec76a375ff09fe0",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -96,20 +96,20 @@
     "width": 300
   },
   "right": {
-    "id": "8813674c2b41bc4a",
+    "id": "eb69f0b3337de913",
     "type": "split",
     "children": [
       {
-        "id": "ad562227e67d56cd",
+        "id": "773499ac05449281",
         "type": "tabs",
         "children": [
           {
-            "id": "dfbfd11b0de4e3e9",
+            "id": "d43e054463217a0c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DOTS/Unity中的DOTS/2. Job System.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,25 +119,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "2. Job System 的反向链接列表"
+              "title": "1. 服务端 的反向链接列表"
             }
           },
           {
-            "id": "3f214e2104ac9876",
+            "id": "fd6eb0e5493a6738",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DOTS/Unity中的DOTS/2. Job System.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "2. Job System 的出链列表"
+              "title": "1. 服务端 的出链列表"
             }
           },
           {
-            "id": "35f92788d1043d6b",
+            "id": "827952ba3f7d4eb2",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -152,18 +152,18 @@
             }
           },
           {
-            "id": "f4b196f5f097c54e",
+            "id": "3c34eff356b6dd6b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "DOTS/Unity中的DOTS/2. Job System.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2. Job System 的大纲"
+              "title": "1. 服务端 的大纲"
             }
           }
         ]
@@ -175,52 +175,50 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
     }
   },
-  "active": "e40fc2abdde93060",
+  "active": "e194d42921cc0b7c",
   "lastOpenFiles": [
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.1 视频播放.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.2 粒子系统.md",
-    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.1 物理引擎基础.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统",
-    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.2 典型物理效果模拟.md",
-    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.5 浮力效果.md",
-    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.4 碰撞事件.md",
-    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.3 链接结构.md",
+    "游戏开发中的网络同步/5. 状态同步 vs 帧同步.md",
+    "游戏开发中的网络同步/4. 帧同步.md",
+    "游戏开发中的网络同步/1. 服务端.md",
+    "游戏开发中的网络同步/3. 状态同步.md",
+    "游戏开发中的网络同步/2. 客户端.md",
     "游戏引擎原理及其应用-笔记/第8章 人工智能/8.3 机器学习.md",
     "游戏引擎原理及其应用-笔记/第8章 人工智能/8.2 智能行为实现.md",
     "游戏引擎原理及其应用-笔记/第8章 人工智能/8.1 自动寻路.md",
-    "DOTS/Unity中的DOTS/4. Mathematics 数学库.md",
     "游戏引擎原理及其应用-笔记/第8章 人工智能",
-    "DOTS/Unity中的DOTS/1. ECS 总览.md",
-    "DOTS/Unity中的DOTS/Unity中的ECS",
-    "DOTS/Unity中的DOTS/未命名.md",
-    "DOTS/Unity中的DOTS/3. Burst Compiler.md",
-    "DOTS/Unity中的DOTS/2. Job System.md",
-    "DOTS/数据导向技术栈-电子书/11 N4E 与 Character Controller.md",
-    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.4 Cinemachine.md",
-    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.3 脚本控制.md",
-    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.2 动画.md",
-    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.1 时间轴.md",
-    "游戏引擎原理及其应用-笔记/第3章 渲染系统/理论课/3.7 全局光照系统 GI.md",
-    "游戏引擎原理及其应用-笔记/第12章 影视内容创作",
-    "游戏引擎原理及其应用-笔记/未命名.md",
-    "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课/游戏物体外观.md",
-    "游戏引擎原理及其应用-笔记/第2章 动画系统/理论课/2.5 子状态机  融合树 目标匹配.md",
-    "游戏引擎原理及其应用-笔记/第2章 动画系统/理论课/2.4 Ik 逆向运动学.md",
-    "游戏引擎原理及其应用-笔记/第2章 动画系统/理论课/2.3 动画曲线 & 层.md",
+    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.5 浮力效果.md",
+    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.4 碰撞事件.md",
+    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.3 链接结构.md",
+    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.2 典型物理效果模拟.md",
+    "游戏引擎原理及其应用-笔记/第7章 物理系统/7.1 物理引擎基础.md",
     "游戏引擎原理及其应用-笔记/第7章 物理系统",
-    "未命名.canvas",
+    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.2 粒子系统.md",
+    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.1 视频播放.md",
+    "游戏引擎原理及其应用-笔记/第4章 特效系统",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课/游戏物体外观.md",
     "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.4 渲染优化.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.3 内存管理.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.2 代码优化.md",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课/14.1 性能审查.md",
     "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课",
     "游戏引擎原理及其应用-笔记/第14章 性能优化",
-    "未命名"
+    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.3 脚本控制.md",
+    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.4 Cinemachine.md",
+    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.2 动画.md",
+    "游戏引擎原理及其应用-笔记/第12章 影视内容创作/12.1 时间轴.md",
+    "游戏引擎原理及其应用-笔记/第12章 影视内容创作",
+    "DOTS/Unity中的DOTS/4. Mathematics 数学库.md",
+    "DOTS/Unity中的DOTS/3. Burst Compiler.md",
+    "游戏开发中的网络同步"
   ]
 }
