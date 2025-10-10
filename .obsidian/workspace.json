@@ -41,26 +41,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOTS/Unity中的DOTS/概念相关/2. Job System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2. Job System"
-            }
-          },
-          {
-            "id": "ce49d60383b8758e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "DOTS/Unity中的DOTS/API&实际应用相关/6. Aspect及其应用.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "6. Aspect及其应用"
+            }
+          },
+          {
+            "id": "e4ce772c9e9a8e59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/API&实际应用相关/5. Baker及其应用.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5. Baker及其应用"
             }
           }
         ],
@@ -87,7 +87,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -203,26 +203,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
     }
   },
-  "active": "ce49d60383b8758e",
+  "active": "e4ce772c9e9a8e59",
   "lastOpenFiles": [
-    "DOTS/Unity中的DOTS/API&实际应用相关/5. Baker及其应用.md",
     "DOTS/Unity中的DOTS/API&实际应用相关/6. Aspect及其应用.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.4 群体行为.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.1 自动寻路.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.2 智能行为实现.md",
+    "DOTS/Unity中的DOTS/概念相关/2. Job System.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/5. Baker及其应用.md",
     "DOTS/Unity中的DOTS/API&实际应用相关/1. Mathematics 数学库.md",
     "DOTS/Unity中的DOTS/API&实际应用相关/4. SystemGroup及其应用.md",
     "DOTS/Unity中的DOTS/API&实际应用相关/3. SystemState及其应用.md",
     "DOTS/Unity中的DOTS/API&实际应用相关/2. DOTS中的System及常用API.md",
     "DOTS/Unity中的DOTS/概念相关/3. Burst Compiler.md",
     "DOTS/Unity中的DOTS/概念相关/1. ECS 总览.md",
-    "DOTS/Unity中的DOTS/概念相关/2. Job System.md",
     "DOTS/Unity中的DOTS/概念相关",
     "DOTS/Unity中的DOTS/API&实际应用相关",
     "DOTS/数据导向技术栈-电子书/01 引言.md",
@@ -234,8 +237,6 @@
     "游戏开发中的网络同步/3. 状态同步.md",
     "游戏开发中的网络同步/2. 客户端.md",
     "游戏引擎原理及其应用-笔记/第8章 人工智能/8.3 机器学习.md",
-    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.2 智能行为实现.md",
-    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.1 自动寻路.md",
     "游戏引擎原理及其应用-笔记/第8章 人工智能",
     "游戏引擎原理及其应用-笔记/第7章 物理系统/7.5 浮力效果.md",
     "游戏引擎原理及其应用-笔记/第7章 物理系统/7.4 碰撞事件.md",
@@ -243,7 +244,6 @@
     "游戏引擎原理及其应用-笔记/第7章 物理系统/7.2 典型物理效果模拟.md",
     "游戏引擎原理及其应用-笔记/第7章 物理系统/7.1 物理引擎基础.md",
     "游戏引擎原理及其应用-笔记/第7章 物理系统",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.2 粒子系统.md",
     "游戏引擎原理及其应用-笔记/第4章 特效系统",
     "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课",
     "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课",
