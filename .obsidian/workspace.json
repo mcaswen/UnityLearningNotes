@@ -1,51 +1,56 @@
 {
   "main": {
-    "id": "89b5e7d33832ac0a",
+    "id": "a1ca2cad89d4ac8d",
     "type": "split",
     "children": [
       {
-        "id": "b8d0ac2a8af7cc4a",
+        "id": "49cfd98430ea408b",
         "type": "tabs",
         "children": [
           {
-            "id": "074ba169a37ad0bf",
+            "id": "5b688bbdb81a3c7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.5 Unity中的Shader.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.5 Unity中的Shader"
+              "title": "1. 服务端"
             }
           },
           {
-            "id": "2a34c99fabb4943f",
+            "id": "e194d42921cc0b7c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/API&实际应用相关/7. Components及其应用.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "7. Components及其应用"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "68e99e3ebdd0b0be",
+    "id": "6634587251ecbfed",
     "type": "split",
     "children": [
       {
-        "id": "78d60348edf4606a",
+        "id": "a1c1a4c4315ee396",
         "type": "tabs",
         "children": [
           {
-            "id": "b592e81c45139c00",
+            "id": "d8403abc74b42ff3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +63,7 @@
             }
           },
           {
-            "id": "e0daa540e3557827",
+            "id": "348c69fc5ea54d96",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +80,7 @@
             }
           },
           {
-            "id": "3f8129f72272c3da",
+            "id": "7ec76a375ff09fe0",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -91,20 +96,20 @@
     "width": 300
   },
   "right": {
-    "id": "999c0d623df4bfad",
+    "id": "eb69f0b3337de913",
     "type": "split",
     "children": [
       {
-        "id": "93072b2b4f21b154",
+        "id": "773499ac05449281",
         "type": "tabs",
         "children": [
           {
-            "id": "ec57aa70f8b2d149",
+            "id": "d43e054463217a0c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,25 +119,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "4.4 后处理效果 的反向链接列表"
+              "title": "1. 服务端 的反向链接列表"
             }
           },
           {
-            "id": "2584ea930b3e5eab",
+            "id": "fd6eb0e5493a6738",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "4.4 后处理效果 的出链列表"
+              "title": "1. 服务端 的出链列表"
             }
           },
           {
-            "id": "0832b45f083f89e0",
+            "id": "827952ba3f7d4eb2",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,18 +152,18 @@
             }
           },
           {
-            "id": "90291ec710c911ab",
+            "id": "3c34eff356b6dd6b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "4.4 后处理效果 的大纲"
+              "title": "1. 服务端 的大纲"
             }
           }
         ]
@@ -179,12 +184,43 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "074ba169a37ad0bf",
+  "active": "d8403abc74b42ff3",
   "lastOpenFiles": [
+    "DOTS/Unity中的DOTS/API&实际应用相关/6. Aspect及其应用.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/7. Components及其应用.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/3. SystemState及其应用.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/2. DOTS中的System及常用API.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/4. SystemGroup及其应用.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/5. Baker及其应用.md",
+    "DOTS/Unity中的DOTS/概念相关/3. Burst Compiler.md",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程/5.1 脚本和组件.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能/8.4 群体行为.md",
+    "游戏开发中的网络同步/7. RPC.md",
+    "游戏开发中的网络同步/6. 序列化与反序列化.md",
+    "DOTS/Unity中的DOTS/概念相关/2. Job System.md",
+    "DOTS/Unity中的DOTS/概念相关/1. ECS 总览.md",
+    "DOTS/Unity中的DOTS/概念相关",
+    "DOTS/Unity中的DOTS/API&实际应用相关/1. Mathematics 数学库.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程/5.3 函数执行顺序.md",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程/5.2 重要函数或类.md",
+    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.2 粒子系统.md",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程/5.6 预制体.md",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程/5.5 协程.md",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程/5.4 序列化.md",
+    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.3 Unity中的粒子系统.md",
+    "游戏引擎原理及其应用-笔记/第5章 脚本编程",
     "游戏引擎原理及其应用-笔记/第4章 特效系统/4.1 视频播放.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.5 Unity中的Shader.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
-    "未命名.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.3 Unity中的粒子系统.md"
+    "游戏开发中的网络同步/4. 帧同步.md",
+    "游戏开发中的网络同步/5. 状态同步 vs 帧同步.md",
+    "游戏开发中的网络同步/1. 服务端.md",
+    "游戏开发中的网络同步/3. 状态同步.md",
+    "游戏引擎原理及其应用-笔记/第8章 人工智能",
+    "游戏引擎原理及其应用-笔记/第7章 物理系统",
+    "游戏引擎原理及其应用-笔记/第4章 特效系统",
+    "游戏引擎原理及其应用-笔记/第3章 渲染系统/实践课",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化/理论课",
+    "游戏引擎原理及其应用-笔记/第14章 性能优化",
+    "游戏引擎原理及其应用-笔记/第12章 影视内容创作"
   ]
 }
