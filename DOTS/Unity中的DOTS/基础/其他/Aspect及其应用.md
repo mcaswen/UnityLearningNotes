@@ -2,13 +2,13 @@
 
 `Aspect` 是把同一实体上的一组组件、缓冲区以及启用位封装进一个 `readonly partial struct`，对外像“对象”一样提供字段/属性/方法，用来简化查询与封装业务逻辑。
 
-它可以包含：`Entity` 本体、`RefRO/RefRW<T>`（组件读/写）、`EnabledRefRO/EnabledRefRW<T>`（启用位）、`DynamicBuffer<T>`、甚至**嵌套其他 `Aspect`**。用途是“组织组件代码、让系统查询更简单”。[Unity Manual](https://docs.unity3d.com/Packages/com.unity.entities%401.0/manual/aspects-concepts.html)
+它可以包含：`Entity` 本体、`RefRO/RefRW<T>`（组件读/写）、`EnabledRefRO/EnabledRefRW<T>`（启用位）、`DynamicBuffer<T>`、甚至**嵌套其他 `Aspect`**。用途是“组织组件代码、让系统查询更简单”。
 
 #### 二、怎么创建与使用？
 
 声明方式固定：`readonly partial struct XxxAspect : IAspect`；字段用 `RefRO/RefRW<T>`、`DynamicBuffer<T>` 等；可用 `[Optional]` 声明“可选组件”，配套 `IsValid` 检查；用 `[ReadOnly]` 把字段视作只读参与查询。
 
-在系统里，你既可以**按实体取单个 `Aspect`**（`SystemAPI.GetAspect<MyAspect>(entity)`），也可以**直接遍历 `Aspect`**（`foreach (var a in SystemAPI.Query<MyAspect>())`）。在系统外需要实例时，用 `EntityManager.GetAspect`。
+在系统里，既可以**按实体取单个 `Aspect`**（`SystemAPI.GetAspect<MyAspect>(entity)`），也可以**直接遍历 `Aspect`**（`foreach (var a in SystemAPI.Query<MyAspect>())`）。在系统外需要实例时，用 `EntityManager.GetAspect`。
 
 另外，`Aspect` 本身可做为 **`IJobEntity`** 的参数进入 `Job`（[示例](https://docs.unity3d.com/Packages/com.unity.entities%401.0/manual/aspects-create.html)见官方“Create an aspect”页的 `CannonBallJob`）。
 

@@ -124,7 +124,7 @@ public partial struct CleanupSystem : ISystem
 - **确定回放顺序**：并行追加/移除组件时用 `ParallelWriter + [ChunkIndexInQuery]` 当 `sortKey`。
     
 
-#### 9）易错点（面试追问）
+#### 9）面试易错点
 
 - **忘记回写依赖**：自己 `new` 的 Job 如果不把返回的 `JobHandle` 赋回 `state.Dependency`，后续系统看不到你的写入依赖，可能报并发安全错误。
     
