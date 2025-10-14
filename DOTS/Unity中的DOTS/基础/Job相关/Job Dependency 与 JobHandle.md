@@ -1,4 +1,4 @@
-#### 1）`Job`、`JobHandle`、`Dependency` 分别是什么
+#### 一、`Job`、`JobHandle`、`Dependency` 分别是什么
 
 - **Job**：丢给 C# Job System 的可并行任务单元。系统在主线程“排班”，Job 在工作线程“干活”。
     
@@ -8,19 +8,19 @@
 
 > 面试要点：Dependency 不是“随便的一个句柄”，而是**该系统的 `ECS` 相关依赖的总和**，由引擎根据**读/写了哪些组件**推导而成。
 
-#### 2）系统如何“自动”管理 Job 依赖？
+#### 二、系统如何“自动”管理 Job 依赖？
 
 - **自动部分**：Entities 会按“**哪个系统读/写了哪些组件**”在系统之间建立**作业依赖**。比如甲系统读 `Velocity`，乙系统写 `Velocity`，那乙系统的作业会**依赖**甲系统的相关作业。
     
 - **最佳实践**：在系统里每次 `.Schedule()` / `.ScheduleParallel()` 之后，把返回值**赋回** `state.Dependency`（或 `this.Dependency` in `SystemBase`），这样后续系统才能感知到你新排的作业。必要时用 `CompleteDependency()` 把当前系统的未完成作业**切到同步点**（例如你马上要在主线程访问这些数据）。
 
-#### 3）很多依赖怎么办？手工“捆绑”与合并策略
+#### 三、很多依赖怎么办？手工“捆绑”与合并策略
 
 - 同一帧里可能得到**多张票据**（多个 `JobHandle`）。把它们用 **`JobHandle.CombineDependencies`** 合成一张，然后把这张**合并结果**作为后续 Job 的输入依赖，或赋给系统的 `Dependency`。适合“扇出→扇入”的图状流水。
     
 -  **Combine = 合并等待条件**，并不是“让 A 依赖 B 再依赖 C 的链条”。链式先后仍靠逐个 `Schedule(前一个句柄)` 来表达。
 
-#### 4）为什么不能直接用 `EntityManager` 访问组件？
+#### 四、为什么不能直接用 `EntityManager` 访问组件？
 
 在 **主线程**用 `EntityManager.GetComponentData` 等 API 读取，常常会**强制完成相关写作业**，形成意外同步点；
 
@@ -28,17 +28,17 @@
 
 这些查表入口放在 **`SystemAPI.GetComponentLookup/ GetBufferLookup`**。
 
-#### 5）结构变更的依赖：并行录制 + 回放点
+#### 五、结构变更的依赖：并行录制 + 回放点
 
 结构变更（建/销实体、加/删组件、写 Buffer）**不能**直接在 Job 里做，正确方式是把意图记录进 **`EntityCommandBuffer`**，并在**组的固定回放点**（Begin/End _X_）由主线程**顺序回放**。
 
 并行录制用 `ParallelWriter`，**第一个参数传 `sortKey`（常用 `[ChunkIndexInQuery]`）**，回放前会按 `sortKey` 排序，从而得到**确定的回放顺序**。
 
-#### 6）`IJobEntity` 与“依赖注入”的常见写法
+#### 六、`IJobEntity` 与“依赖注入”的常见写法
 
 `IJobEntity` 是最常用的 `ECS` Job 壳子：只用写 `Execute(...)`，编译器会把它生成为 `IJobChunk`。它可以直接用 `in/ref IComponentData`、`DynamicBuffer<T>`、`Aspect` 等参数，支持 `WithChangeFilter` 等过滤特性；排完后把 `JobHandle` 回写系统的 `Dependency` 即可。
 
-#### 7）从**客户端**角度的三条“思维模板”
+#### 七、从**客户端**角度的三条“思维模板”
 
 1. **数据→行为→回放**：  
     数据热路径（移动/插值/AI 评估）→ 写成 `IJobEntity`；需要生成/回收/切换状态 → 在 Job 里用 `ECB` 记录 → 选对回放点（多半 `EndSimulation`），**并把并行录制的 `sortKey` 固定**。
@@ -49,7 +49,7 @@
 3. **同步点要有意识地打**：  
     只有当真的要在主线程操作（例如 `UI` 桥接、物理世界只读快照）时，才用 `CompleteDependency()`；否则让作业链条自然延伸到下游系统。
 
-#### 8）客户端实践
+#### 八、客户端实践
 ##### 代码范式 A：两段并行作业 + 明确依赖链（移动 → 阻尼）
 ```
 using Unity.Burst;
@@ -143,7 +143,7 @@ public partial struct CleanupAndSpawnSystem : ISystem
 
 ---
 
-#### 8）面试易错点
+#### 九、面试易错点
 
 - **忘记回写 `Dependency`**：作业排了但没把 `JobHandle` 写回系统，后续系统“不知道”你的写入，轻则串发警告，重则数据竞争。修正：每次 `Schedule*` 后都更新 `state.Dependency`（或把最后的合并句柄写回）。
     
@@ -156,7 +156,7 @@ public partial struct CleanupAndSpawnSystem : ISystem
 - **同步点缺乏节制**：`CompleteDependency()` 用在“必须主线程读取”的临界点，不要每帧乱打同步点。（API 说明确认为“完成本系统已注册的作业”。）
     
 
-#### 面试速答 
+#### 总结
 
 > **`JobHandle`** 是 Job 的“完成票据”；系统的 **`Dependency`** 是“该系统的总依赖”。
 > 

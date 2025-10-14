@@ -62,7 +62,7 @@
 - **可视化排查**：用 **Systems** 窗口查看整棵组树与最终排序（Editor 菜单 Window > Entities > Systems）。
     
 
-#### 八、面试速答
+#### 八、总结
 
 > **定义**：`SystemGroup` 把系统按阶段/顺序编组，每帧主线程按序更新。默认三根组：Init/Sim/Presentation，分别在 `Initialization`/`Update`/`PreLateUpdate` 末尾跑；不指定组就进 Simulation。排序靠 `UpdateInGroup + UpdateBefore/After`（同组内），`OrderFirst/Last` 优先。
 > 

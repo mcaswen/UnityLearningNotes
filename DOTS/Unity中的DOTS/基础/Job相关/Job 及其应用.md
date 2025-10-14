@@ -1,4 +1,4 @@
-#### 1）什么是 DOTS 里的“Job”？系统为何要用它
+#### 一、什么是 DOTS 里的“Job”？系统为何要用它
 
 Job 可以逐实体/逐块计算丢给 C# Job System 的多线程任务单元；
 
@@ -6,8 +6,7 @@ Entities 会在主线程按系统顺序调度，但**能自动根据组件的读
 
 官方明确建议：系统逻辑“能上 Job 就上 Job”。
 
-#### 2）两条主流写法：`IJobEntity` vs `IJobChunk`
-
+#### 二、两条主流写法：`IJobEntity` vs `IJobChunk`
 
 - **`IJobEntity`**：
 	- 写一个 `partial struct … : IJobEntity`，实现 `Execute(...)`，可 `.Schedule()` / `.ScheduleParallel()`，能复用到多个系统；它本质会生成一个 `IJobChunk`，所以只需关心“要改哪些组件”。
@@ -17,7 +16,7 @@ Entities 会在主线程按系统顺序调度，但**能自动根据组件的读
 - **`IJobChunk`**：按 **Chunk** 粒度拿句柄、自己处理启用位/掩码等底层细节。适合需要“按块管控/极致自定义遍历”的场景或做更底层优化。
     
 
-#### 3）Job 的依赖与系统的 `Dependency`
+#### 三、Job 的依赖与系统的 `Dependency`
 
 每个系统都有一个 `Dependency : JobHandle`。在 `OnUpdate` 开头，它表示“本系统对之前已排作业的**自动依赖**”；
 
@@ -25,21 +24,21 @@ Entities 会在主线程按系统顺序调度，但**能自动根据组件的读
 
 必要时可 `state.CompleteDependency()` 在主线程人为切分同步点。
 
-#### 4）与 **`SystemAPI`** 的正确搭配（避免“主线程卡刀”）
+#### 四、与 **`SystemAPI`** 的正确搭配（避免“主线程卡刀”）
 
 把 `ComponentLookup<T>` / `BufferLookup<T>` 这类**查表**通过 `SystemAPI.GetComponentLookup / GetBufferLookup` 拿出来传进 Job —— 这些操作**不会触发同步**，源码生成会在 `OnCreate` 缓存、在 `OnUpdate` 自动 `.Update(ref state)`。
 
 相反，直接走 `EntityManager.GetComponentData` 之类会强制同步，热路径要避免。
 
-#### 5）结构变更要借助 **`ECB`**，并行下用 `sortKey` 保留顺序
+#### 五、结构变更要借助 **`ECB`**，并行下用 `sortKey` 保留顺序
 
 Job 中要“加/删组件、建/销实体/缓冲追加”，就要记录到 **`EntityCommandBuffer`**（或它的 `ParallelWriter`）。并行写入时传入 `int sortKey`（通常用 `[ChunkIndexInQuery]`），Unity 会在**回放前按 `sortKey` 排序**，让回放顺序可复现（非确定的录制 → 确定的回放）。
 
-#### 6）Burst 编译
+#### 六、Burst 编译
 
-**答：**在 Job/系统类型上加 `[BurstCompile]` 可获得 `SIMD`/向量化等优化；官方文档也说明可通过属性参数微调编译策略。
+在 Job/系统类型上加 `[BurstCompile]` 可获得 `SIMD`/向量化等优化；官方文档也说明可通过属性参数微调编译策略。
 
-#### 7） 客户端实践
+#### 七、客户端实践
 ##### A：`IJobEntity` 并行移动（含依赖回写）
 
 ```
@@ -113,7 +112,7 @@ public partial struct CleanupSystem : ISystem
 
 ---
 
-#### 8）客户端高频落地
+#### 八、客户端高频落地
 
 - **热路径**：把“移动/动画采样/插值/投射体更新/`LOD` 计算”等写成 `IJobEntity` 并行跑；用 `state.Dependency` 串联上下游。
     
@@ -124,9 +123,9 @@ public partial struct CleanupSystem : ISystem
 - **确定回放顺序**：并行追加/移除组件时用 `ParallelWriter + [ChunkIndexInQuery]` 当 `sortKey`。
     
 
-#### 9）面试易错点
+#### 九、面试易错点
 
-- **忘记回写依赖**：自己 `new` 的 Job 如果不把返回的 `JobHandle` 赋回 `state.Dependency`，后续系统看不到你的写入依赖，可能报并发安全错误。
+- **忘记回写依赖**：自己 `new` 的 Job 如果不把返回的 `JobHandle` 赋回 `state.Dependency`，后续系统看不到写入依赖，可能报并发安全错误。
     
 - **主线程同步点**：`EntityManager.GetComponentData` 会强制完成相关写作业；优先用 `SystemAPI.GetComponentLookup/BufferLookup` 把数据喂进 Job。
     
@@ -135,7 +134,7 @@ public partial struct CleanupSystem : ISystem
 
 ---
 
-#### 面试速答 
+#### 总结
 
 > **Job = 多线程执行 `ECS` 计算**；常用 **`IJobEntity`**（高层、好复用）和 **`IJobChunk`**（底层、可精细控制）。
 > 

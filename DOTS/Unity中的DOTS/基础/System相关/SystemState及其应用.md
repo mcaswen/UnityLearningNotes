@@ -130,6 +130,6 @@ public partial struct DamageSystem : ISystem
 
 ---
 
-**一口气记忆版：**
+#### 八、总结：
 
-> _`SystemState` = `ISystem` 的世界句柄 + 依赖汇总器 + 查询/`Lookup/TypeHandle` 缓存器 + 运行开关。`OnCreate` 缓存（`Query/Handle/Lookup`），`OnUpdate` 先 `Update` 缓存再调度 `Job`，用 `Dependency` 串依赖；用 `RequireForUpdate`/`RequireAnyForUpdate`/`Enabled` 决定系统是否跑；需要时 `CompleteDependency` 做分段同步。`SystemAPI` 是糖衣，能自动缓存并智能同步，但热路径上显式用 `SystemState` 更可控。_
+> `SystemState` = `ISystem` 的世界句柄 + 依赖汇总器 + 查询/`Lookup/TypeHandle` 缓存器 + 运行开关。`OnCreate` 缓存（`Query/Handle/Lookup`），`OnUpdate` 先 `Update` 缓存再调度 `Job`，用 `Dependency` 串依赖；用 `RequireForUpdate`/`RequireAnyForUpdate`/`Enabled` 决定系统是否跑；需要时 `CompleteDependency` 做分段同步。`SystemAPI` 是糖衣，能自动缓存并智能同步，但热路径上显式用 `SystemState` 更可控。
