@@ -1,42 +1,70 @@
 {
   "main": {
-    "id": "89b5e7d33832ac0a",
+    "id": "a1ca2cad89d4ac8d",
     "type": "split",
     "children": [
       {
-        "id": "b8d0ac2a8af7cc4a",
+        "id": "49cfd98430ea408b",
         "type": "tabs",
         "children": [
           {
-            "id": "2a34c99fabb4943f",
+            "id": "5b688bbdb81a3c7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOTS/Unity中的DOTS/基础/其他/Aspect及其应用.md",
+                "file": "DOTS/Unity中的DOTS/基础/Component相关/Buffer及其应用.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Aspect及其应用"
+              "title": "Buffer及其应用"
+            }
+          },
+          {
+            "id": "bc3cd77ae75daac0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/基础/Component相关/Buffer及其应用.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Buffer及其应用"
+            }
+          },
+          {
+            "id": "9aff452565e4539e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/CommandTarget及其应用.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CommandTarget及其应用"
             }
           }
         ],
-        "stacked": true
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "68e99e3ebdd0b0be",
+    "id": "6634587251ecbfed",
     "type": "split",
     "children": [
       {
-        "id": "78d60348edf4606a",
+        "id": "a1c1a4c4315ee396",
         "type": "tabs",
         "children": [
           {
-            "id": "b592e81c45139c00",
+            "id": "d8403abc74b42ff3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -49,7 +77,7 @@
             }
           },
           {
-            "id": "e0daa540e3557827",
+            "id": "348c69fc5ea54d96",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -66,7 +94,7 @@
             }
           },
           {
-            "id": "3f8129f72272c3da",
+            "id": "7ec76a375ff09fe0",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -79,23 +107,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 386.5
+    "width": 300
   },
   "right": {
-    "id": "999c0d623df4bfad",
+    "id": "eb69f0b3337de913",
     "type": "split",
     "children": [
       {
-        "id": "93072b2b4f21b154",
+        "id": "773499ac05449281",
         "type": "tabs",
         "children": [
           {
-            "id": "ec57aa70f8b2d149",
+            "id": "d43e054463217a0c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DOTS/Unity中的DOTS/API&实际应用相关/12. Job 及其应用.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,25 +133,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "12. Job 及其应用 的反向链接列表"
+              "title": "1. 服务端 的反向链接列表"
             }
           },
           {
-            "id": "2584ea930b3e5eab",
+            "id": "fd6eb0e5493a6738",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "4.4 后处理效果 的出链列表"
+              "title": "1. 服务端 的出链列表"
             }
           },
           {
-            "id": "0832b45f083f89e0",
+            "id": "827952ba3f7d4eb2",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,18 +166,18 @@
             }
           },
           {
-            "id": "90291ec710c911ab",
+            "id": "3c34eff356b6dd6b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
+                "file": "游戏开发中的网络同步/1. 服务端.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "4.4 后处理效果 的大纲"
+              "title": "1. 服务端 的大纲"
             }
           }
         ]
@@ -170,31 +198,42 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "2a34c99fabb4943f",
+  "active": "9aff452565e4539e",
   "lastOpenFiles": [
-    "DOTS/Unity中的DOTS/基础/Job相关/Schedule() 和 ScheduleParallel()的区别.md",
-    "DOTS/Unity中的DOTS/基础/Job相关/Job Dependency 与 JobHandle.md",
-    "DOTS/Unity中的DOTS/基础/Job相关/Job 及其应用.md",
-    "DOTS/Unity中的DOTS/基础/其他/Aspect及其应用.md",
-    "DOTS/Unity中的DOTS/基础/其他/Baker及其应用.md",
-    "DOTS/Unity中的DOTS/基础/其他/Mathematics 数学库.md",
-    "DOTS/Unity中的DOTS/基础/其他",
-    "DOTS/Unity中的DOTS/基础/Component和Entity相关/Entity Query 及其应用.md",
-    "DOTS/Unity中的DOTS/基础/Job相关",
-    "DOTS/Unity中的DOTS/基础/Component和Entity相关/Entity Command Buffer及其应用.md",
-    "DOTS/Unity中的DOTS/基础/Component和Entity相关/Buffer及其应用.md",
-    "DOTS/Unity中的DOTS/基础/Component和Entity相关/Components及其应用.md",
-    "DOTS/Unity中的DOTS/基础/System相关/SystemGroup及其应用.md",
-    "DOTS/Unity中的DOTS/基础/Component和Entity相关",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/NetworkId及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/CommandTarget及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/网络同步相关",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/Bootstrap及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施",
+    "DOTS/Unity中的DOTS/基础/Component相关/Component及其应用.md",
+    "DOTS/Unity中的DOTS/基础/Component相关/Buffer及其应用.md",
+    "DOTS/Unity中的DOTS/基础/Component相关",
     "DOTS/Unity中的DOTS/基础/System相关/SystemState及其应用.md",
-    "DOTS/Unity中的DOTS/基础/Component和Entity相关.md",
+    "DOTS/Unity中的DOTS/基础/System相关/SystemGroup及其应用.md",
     "DOTS/Unity中的DOTS/基础/System相关/DOTS中的System及常用API.md",
+    "DOTS/Unity中的DOTS/基础/Entity相关/Entity Query 及其应用.md",
+    "DOTS/Unity中的DOTS/基础/Entity相关/Entity Command Buffer及其应用.md",
+    "DOTS/Unity中的DOTS/基础/Entity相关/Entity Manager 及其应用.md",
+    "DOTS/Unity中的DOTS/基础/Job相关/Job Dependency 与 JobHandle.md",
+    "DOTS/Unity中的DOTS/基础/Job相关/Schedule() 和 ScheduleParallel()的区别.md",
+    "DOTS/Unity中的DOTS/基础/Job相关/Job 及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关/WorldFlags及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关/WorldSystemFliter及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关/World及其应用.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities",
+    "DOTS/Unity中的DOTS/未命名.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/7. Components及其应用.md",
+    "DOTS/Unity中的DOTS/基础/其他/Mathematics 数学库.md",
+    "DOTS/Unity中的DOTS/基础/其他/Baker及其应用.md",
+    "DOTS/Unity中的DOTS/基础/其他/Aspect及其应用.md",
+    "DOTS/Unity中的DOTS/基础/其他",
     "DOTS/Unity中的DOTS/基础/System相关",
-    "DOTS/Unity中的DOTS/基础",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.5 Unity中的Shader.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.1 视频播放.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.4 后处理效果.md",
-    "未命名.md",
-    "游戏引擎原理及其应用-笔记/第4章 特效系统/4.3 Unity中的粒子系统.md"
+    "DOTS/Unity中的DOTS/基础/Job相关",
+    "DOTS/Unity中的DOTS/基础/Entity相关",
+    "DOTS/Unity中的DOTS/API&实际应用相关/6. Aspect及其应用.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/3. SystemState及其应用.md",
+    "DOTS/Unity中的DOTS/API&实际应用相关/2. DOTS中的System及常用API.md"
   ]
 }

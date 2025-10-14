@@ -1,8 +1,8 @@
-#### 1）什么是 `EntityQuery`？
+#### 一、什么是 `EntityQuery`？
 
 **答：**`EntityQuery` 用来在**原型-Chunk**层面选择数据：它先锁定“包含某些组件集合”的**原型（archetypes）**，再把这些原型下的**Chunk**收集起来，供系统按块/按实体迭代与调度作业，是 `ECS` 数据访问的核心入口。
 
-#### 2）如何创建一个 Query？
+#### 二、如何创建一个 Query？
 
 - **`EntityQueryBuilder`（推荐）**：`WithAll/WithAny/WithNone` 组合组件约束，Burst 友好；适用于 `ISystem` 与 `SystemBase`。
     
@@ -33,7 +33,7 @@ public partial struct FindMovablesSystem : ISystem
 
 （`SystemAPI.QueryBuilder` 可构建并缓存 `Query`；`RequireForUpdate(EntityQuery)` 让系统“有匹配才跑”。）
 
-#### 3）查询条件 & 过滤：All/Any/None + Filters
+#### 三、查询条件 & 过滤：All/Any/None + Filters
 
 - **集合约束**：  
     `WithAll<T>()`（必须都有），`WithAny<T>()`（至少一个），`WithNone<T>()`（必须没有）。
@@ -46,7 +46,7 @@ public partial struct FindMovablesSystem : ISystem
     只处理“发生结构改动”的 Chunk（如加删组件/生成销毁）。`AddOrderVersionFilter()`。
     
 
-#### 4）Query 选项（`WithOptions`）——Prefab/禁用/启用位等
+#### 四、Query 选项（`WithOptions`）——Prefab/禁用/启用位等
 
 通过 `WithOptions(EntityQueryOptions)` 改变匹配策略：
 
@@ -59,13 +59,13 @@ public partial struct FindMovablesSystem : ISystem
 - `FilterWriteGroup`：按 `WriteGroup` 约束过滤，只选明确包含的写组成员。
     
 
-#### 5）如何在主线程和作业里“消费”一个 Query？
+#### 五、如何在主线程和作业里“消费”一个 Query？
 
 - **主线程枚举**（推荐易用）：`foreach (var (...) in SystemAPI.Query<...>())`；支持 `RefRO/RefRW<T>`、`DynamicBuffer<T>`、`Aspect`、`EnabledRef*` 等参数类型，源码生成自动缓存句柄与依赖。
     
 - **作业化**：把 Query 传给 `IJobEntity` 的 `Schedule(_q, state.Dependency)`，或用 `IJobChunk`/`ArchetypeChunk` 级处理。`EntityQueryBuilder`/`SystemAPI.QueryBuilder` 创建的查询都能用于并行调度。
     
-#### 6）客户端场景的三类“高频用法”
+#### 六、客户端场景的三类“高频用法”
 
 1. **系统启停/降噪**  
     - 用 `state.RequireForUpdate(query)` 只在“真有目标实体”时执行；
@@ -82,7 +82,7 @@ public partial struct FindMovablesSystem : ISystem
     - 需要在烘焙或生成流水线里批量扫描 **Prefab 实体**，再加 `IncludePrefab`。
         
 
-#### 7）客户端实践
+#### 七、客户端实践
 
 **A. 变更过滤 + 主线程枚举（只在位置变更时刷新表现）**
 ```
@@ -104,12 +104,34 @@ public partial struct DrawNamesIfMovedSystem : ISystem
 （`SystemAPI.Query` 支持 `WithChangeFilter<T>`；只处理“自上次系统运行后 `LocalToWorld` 发生变化”的数据。）
 
 **B. 带选项的 `QueryBuilder` + `IJobEntity`（忽略启用位、包含禁用实体）**
+```
+public partial struct LowFreqAIUpdateSystem : ISystem
+{
+    private EntityQuery _q;
+    public void OnCreate(ref SystemState state)
+    {
+        _q = SystemAPI.QueryBuilder()
+             .WithAll<AIState, LocalTransform>()
+             .WithOptions(EntityQueryOptions.IncludeDisabledEntities |
+                          EntityQueryOptions.IgnoreComponentEnabledState)
+             .Build();
+        state.RequireForUpdate(_q);
+    }
 
-`public partial struct LowFreqAIUpdateSystem : ISystem {     private EntityQuery _q;     public void OnCreate(ref SystemState state)     {         _q = SystemAPI.QueryBuilder()              .WithAll<AIState, LocalTransform>()              .WithOptions(EntityQueryOptions.IncludeDisabledEntities |                           EntityQueryOptions.IgnoreComponentEnabledState)              .Build();         state.RequireForUpdate(_q);     }      public void OnUpdate(ref SystemState state)     {         state.Dependency = new AIJob().ScheduleParallel(_q, state.Dependency);     }      partial struct AIJob : IJobEntity { public void Execute(ref AIState ai) { /*…*/ } } }`
+    public void OnUpdate(ref SystemState state)
+    {
+        state.Dependency = new AIJob().ScheduleParallel(_q, state.Dependency);
+    }
 
+    partial struct AIJob : IJobEntity { public void Execute(ref AIState ai) 
+    { /*…*/ } 
+    }
+}
+
+```
 （`IncludeDisabledEntities` 与 `IgnoreComponentEnabledState` 控制“禁用实体/启用位”的匹配；Query 直接传入 `IJobEntity.ScheduleParallel`。）
 
-#### 8）面试“易错点”
+#### 八、面试“易错点”
 
 - **Prefab 是否默认参与？** 通常 **不参与**；要显式 `IncludePrefab`。
     
@@ -120,7 +142,7 @@ public partial struct DrawNamesIfMovedSystem : ISystem
 - **统计数量**：`IsEmpty` 比 `CalculateEntityCount()` 便宜；后者会执行查询并应用过滤。
     
 
-#### 9）面试速答
+#### 九、总结
 
 > **`EntityQuery` = `ECS` 的数据选集。** 用 `EntityQueryBuilder` / `SystemAPI.QueryBuilder` 组合 **All/Any/None** 创建查询；再按需加 **Filters**（`Changed`/`OrderVersion`）与 **Options**（`IncludePrefab`、`IncludeDisabledEntities`、`IgnoreComponentEnabledState` 等）。
 > 

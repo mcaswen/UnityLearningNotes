@@ -39,7 +39,7 @@
 
 **缓冲有单独的 `ECB` API：**
 
-- `SetBuffer<T>`：拿到**`ECB` 内部**的 `DynamicBuffer<T>` 填数据；回放时覆盖目标缓冲（若目标不存在会抛错）。
+- `SetBuffer<T>`：拿到 **`ECB` 内部**的 `DynamicBuffer<T>` 填数据；回放时覆盖目标缓冲（若目标不存在会抛错）。
     
 - `AddBuffer<T>`：若无则添加再得到缓冲；
     
@@ -136,7 +136,7 @@ var ecb = beginInit.CreateCommandBuffer(state.WorldUnmanaged);
 
 （Begin/End 的更新时机与“没有 `EndPresentation`”规则。）
 
-#### 9）高频坑点
+#### 9）常见误区与纠偏
 
 - **Playback 只能主线程**；自己 new 出来的 `ECB` 必须自己 `Playback + Dispose`，但**经 `ECB` System 创建**的不要手动回放/释放。
     
