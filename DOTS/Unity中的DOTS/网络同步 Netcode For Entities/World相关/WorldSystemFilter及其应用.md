@@ -4,8 +4,6 @@
 
 > `WorldSystemFilterFlags.ClientSimulation` 表示“此系统只在可运行**客户端仿真**的 `World` 中创建”，即该 `World` 带有相应的 `WorldFlags`（例如 `GameClient`）。
 
----
-
 #### 二、与系统组（`SystemGroup`）的交互：**组内继承**与“表现只在客户端”
 
 `WorldSystemFilter` 并不是唯一的归属手段。**将系统放进只存在于某类 `World` 的系统组**，即可“隐式继承”该 `World` 过滤：

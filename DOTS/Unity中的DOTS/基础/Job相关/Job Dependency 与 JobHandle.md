@@ -6,7 +6,7 @@
     
 - **`SystemState.Dependency`（简称 `Dependency`）**：每个系统自带的一条“总依赖线”。**在进入 `OnUpdate` 之前**，它已经合并了“所有会与本系统读/写组件发生冲突的前序作业”的句柄；在 `OnUpdate` 里继续排作业时，系统会根据**读/写的组件集合**自动**更新**这条依赖线。
 
-> 面试要点：Dependency 不是“随便的一个句柄”，而是**该系统的 `ECS` 相关依赖的总和**，由引擎根据**读/写了哪些组件**推导而成。
+> **要点**：Dependency 不是“随便的一个句柄”，而是**该系统的 `ECS` 相关依赖的总和**，由引擎根据**读/写了哪些组件**推导而成。
 
 #### 二、系统如何“自动”管理 Job 依赖？
 
@@ -14,7 +14,7 @@
     
 - **最佳实践**：在系统里每次 `.Schedule()` / `.ScheduleParallel()` 之后，把返回值**赋回** `state.Dependency`（或 `this.Dependency` in `SystemBase`），这样后续系统才能感知到你新排的作业。必要时用 `CompleteDependency()` 把当前系统的未完成作业**切到同步点**（例如你马上要在主线程访问这些数据）。
 
-#### 三、很多依赖怎么办？手工“捆绑”与合并策略
+#### 三、手工“捆绑”与合并策略
 
 - 同一帧里可能得到**多张票据**（多个 `JobHandle`）。把它们用 **`JobHandle.CombineDependencies`** 合成一张，然后把这张**合并结果**作为后续 Job 的输入依赖，或赋给系统的 `Dependency`。适合“扇出→扇入”的图状流水。
     
@@ -38,7 +38,7 @@
 
 `IJobEntity` 是最常用的 `ECS` Job 壳子：只用写 `Execute(...)`，编译器会把它生成为 `IJobChunk`。它可以直接用 `in/ref IComponentData`、`DynamicBuffer<T>`、`Aspect` 等参数，支持 `WithChangeFilter` 等过滤特性；排完后把 `JobHandle` 回写系统的 `Dependency` 即可。
 
-#### 七、从**客户端**角度的三条“思维模板”
+#### 七、高频用法
 
 1. **数据→行为→回放**：  
     数据热路径（移动/插值/AI 评估）→ 写成 `IJobEntity`；需要生成/回收/切换状态 → 在 Job 里用 `ECB` 记录 → 选对回放点（多半 `EndSimulation`），**并把并行录制的 `sortKey` 固定**。
@@ -141,7 +141,6 @@ public partial struct CleanupAndSpawnSystem : ISystem
 
 这里展示了**并行录制 + `sortKey`** 与 **`JobHandle.CombineDependencies`** 的常见组合。并行录制的命令在回放前会按 `sortKey` 排序，得到**确定性**回放。
 
----
 
 #### 九、面试易错点
 

@@ -97,7 +97,7 @@ public partial struct DamageSystem : ISystem
 
 上面这套“`**OnCreate` 缓存 → `OnUpdate` 更新缓存 → `Job` 使用**”与 `SystemAPI` 展开的代码是一致的（`SystemAPI` 文档有[完整对照示例](https://docs.unity3d.com/Packages/com.unity.entities%401.0/manual/systems-systemapi.html)）。
 
-#### 五、在客户端开发里的三类典型用法
+#### 五、三类典型用法
 
 1. **系统启停与场景/状态驱动**
     
@@ -132,4 +132,10 @@ public partial struct DamageSystem : ISystem
 
 #### 八、总结：
 
-> `SystemState` = `ISystem` 的世界句柄 + 依赖汇总器 + 查询/`Lookup/TypeHandle` 缓存器 + 运行开关。`OnCreate` 缓存（`Query/Handle/Lookup`），`OnUpdate` 先 `Update` 缓存再调度 `Job`，用 `Dependency` 串依赖；用 `RequireForUpdate`/`RequireAnyForUpdate`/`Enabled` 决定系统是否跑；需要时 `CompleteDependency` 做分段同步。`SystemAPI` 是糖衣，能自动缓存并智能同步，但热路径上显式用 `SystemState` 更可控。
+> `SystemState` = `ISystem` 的世界句柄 + 依赖汇总器 + 查询/`Lookup/TypeHandle` 缓存器 + 运行开关。
+> 
+> `OnCreate` 缓存（`Query/Handle/Lookup`），`OnUpdate` 先 `Update` 缓存再调度 `Job`，用 `Dependency` 串依赖；
+> 
+> 用 `RequireForUpdate`/`RequireAnyForUpdate`/`Enabled` 决定系统是否跑；需要时 `CompleteDependency` 做分段同步。
+> 
+> `SystemAPI` 是糖衣，能自动缓存并智能同步，但热路径上显式用 `SystemState` 更可控。

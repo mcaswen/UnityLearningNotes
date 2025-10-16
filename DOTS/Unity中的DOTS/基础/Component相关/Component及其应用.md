@@ -71,7 +71,7 @@
 - **主线程 `foreach`：**`foreach (var (...) in SystemAPI.Query<...>())`，源生成自动缓存查询与句柄并处理依赖。
     
 
-#### 四、客户端“高频落地”清单
+#### 四、客户端实践
 
 **① 可启用组件 = 轻量状态机**
 
@@ -145,7 +145,7 @@ var cam = SystemAPI.GetSingletonRW<CameraSettings>();
 
 （单例定义与获取方式见文档[Unity 文档](https://docs.unity3d.com/Packages/com.unity.entities%401.0/manual/components-singleton.html?utm_source=chatgpt.com)。）
 
-#### 五、面试速答
+#### 五、总结
 
 > **组件是“数据”，系统是“行为”。**
 > **常用：** 非托管组件跑 Job/Burst；托管组件仅主线程且有 GC；

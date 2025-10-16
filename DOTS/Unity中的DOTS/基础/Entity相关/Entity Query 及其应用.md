@@ -1,6 +1,6 @@
 #### 一、什么是 `EntityQuery`？
 
-**答：**`EntityQuery` 用来在**原型-Chunk**层面选择数据：它先锁定“包含某些组件集合”的**原型（archetypes）**，再把这些原型下的**Chunk**收集起来，供系统按块/按实体迭代与调度作业，是 `ECS` 数据访问的核心入口。
+`EntityQuery` 用来在**原型-Chunk**层面选择数据：它先锁定“包含某些组件集合”的**原型（archetypes）**，再把这些原型下的**Chunk**收集起来，供系统按块/按实体迭代与调度作业，是 `ECS` 数据访问的核心入口。
 
 #### 二、如何创建一个 Query？
 
@@ -65,7 +65,7 @@ public partial struct FindMovablesSystem : ISystem
     
 - **作业化**：把 Query 传给 `IJobEntity` 的 `Schedule(_q, state.Dependency)`，或用 `IJobChunk`/`ArchetypeChunk` 级处理。`EntityQueryBuilder`/`SystemAPI.QueryBuilder` 创建的查询都能用于并行调度。
     
-#### 六、客户端场景的三类“高频用法”
+#### 六、高频用法
 
 1. **系统启停/降噪**  
     - 用 `state.RequireForUpdate(query)` 只在“真有目标实体”时执行；

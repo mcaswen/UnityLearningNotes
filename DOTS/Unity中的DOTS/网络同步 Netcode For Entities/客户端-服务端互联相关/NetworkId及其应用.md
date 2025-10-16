@@ -96,7 +96,7 @@ public partial struct ClientClaimOwnershipSystem : ISystem
 
 说明：Owner-Predicted 流派中，**GhostOwner.NetworkId = 本机 NetworkId** 是让本机走预测的关键纽带；这一点在 UGS 的 [NetCode 入门教程](https://docs.unity.com/ugs/en-us/manual/mps-sdk/manual/build-with-netcode-for-entities?utm_source=chatgpt.com)中也被作为要点呈现。
 
-#### 六、常见误区与修正
+#### 六、常见误区与纠偏
 
 - **把 Network ID 当“账号 ID”使用**：`NetworkId` 在断线后**可被复用**，不可作为持久身份使用；会话外的身份应由账号系统/会话服务承担。
     
