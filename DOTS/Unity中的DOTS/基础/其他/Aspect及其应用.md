@@ -28,7 +28,7 @@
 
 在 Aspect 里用 `EnabledRefRW<T>` / `EnabledRefRO<T>` 操作可启用组件的启用位；用 `DynamicBuffer<T>` 访问 `IBufferElementData`。
 
-这些成员类型都是官方支持的“可放进 Aspect 的字段”。
+这些成员类型都是官方支持的“可放进 `Aspect` 的字段”。
 
 ##### 代码范式 A：角色移动/受控的一体化 Aspect（查询 + 方法封装）
 
@@ -94,7 +94,7 @@ public partial struct CharacterMoveSystem : ISystem
 
 ```
 
-这套写法正是官方提倡的：Aspect 聚合 `RefRO/RefRW`、`EnabledRefRW`、`Entity` 字段，暴露属性与方法；系统端用 `SystemAPI.Query<Aspect>()` 直接遍历。
+这套写法正是官方提倡的：`Aspect` 聚合 `RefRO/RefRW`、`EnabledRefRW`、`Entity` 字段，暴露属性与方法；系统端用 `SystemAPI.Query<Aspect>()` 直接遍历。
 
 ##### 代码范式 B：在 `IJobEntity` 中使用 `Aspect`（高并发路径）
 
@@ -124,11 +124,10 @@ public partial struct CharacterMoveJobSystem : ISystem
 ```
 `IJobEntity` 的[示例](https://docs.unity3d.com/Packages/com.unity.entities%401.0/manual/aspects-create.html)同样来自官方“Create an aspect”页面，`Aspect` 可以直接作为 `Job` 的参数类型。
 
----
 
-# 6）常见面试追问 & 注意点
+#### 六、要点
 
-- **必须是 `readonly partial struct` 并实现 `IAspect`**；字段决定了“这个 Aspect 在某实体上是否有效”。
+- **必须是 `readonly partial struct` 并实现 `IAspect`**；字段决定了“这个 `Aspect` 在某实体上是否有效”。
     
 - **可选字段**：加 `[Optional]`，并通过 `IsValid` 判断该组件是否存在；`[ReadOnly]` 会把查询视作只读。
     
@@ -139,9 +138,8 @@ public partial struct CharacterMoveJobSystem : ISystem
 - **查询边界**：`SystemAPI.Query` 的枚举只在系统方法中可用，不在 `Entities.ForEach` / 其他上下文。
     
 
----
 
-## 30 秒背诵版
+#### 七、总结
 
 > **`Aspect`** = 把同一实体上的多组件（含启用位/缓冲/甚至嵌套 `Aspect`）封装成一个 `readonly partial struct`；在系统里可 `SystemAPI.Query<MyAspect>()` 直接遍历，或 `SystemAPI.GetAspect` 按实体获取；
 > 

@@ -9,7 +9,7 @@ NetCode 提供了 `Unity.NetCode.ClientServerBootstrap` 作为“开机引导”
 
 将 NetCode 包加入工程后，**默认 `Bootstrap`** 会在启动时**自动创建** `Client/Server`（以及按需要的 `Thin Client`）等世界，并按系统的声明（组/过滤特性）把系统注入对应的 `World`。
 
-这在**编辑器直接点 `Play`**的迭代场景非常方便；而在**独立客户端/前端菜单**等项目中，更常见做法是**延迟或按流程创建**世界（同一可执行既能当客户端也能当服务器）。此时可**继承 `ClientServerBootstrap` 并覆写 `Initialize`**，用其工具方法按需创建 `client / server / thin-client / local` 世界。
+这在**编辑器直接点 `Play`** 的迭代场景非常方便；而在**独立客户端/前端菜单**等项目中，更常见做法是**延迟或按流程创建**世界（同一可执行既能当客户端也能当服务器）。此时可**继承 `ClientServerBootstrap` 并覆写 `Initialize`**，用其工具方法按需创建 `client / server / thin-client / local` 世界。
 
 **官方文档给出示例**：覆写 `Initialize` 并仅调用 `CreateLocalWorld(defaultWorldName)`，即可阻止自动建联机世界、只建本地仿真世界。
 

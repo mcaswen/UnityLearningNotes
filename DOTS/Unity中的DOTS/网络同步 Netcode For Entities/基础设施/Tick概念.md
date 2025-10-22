@@ -29,7 +29,7 @@
     
 - **`InterpolationTick` + `InterpolationTickFraction`**：非本地对象的呈现时间轴；UI/HUD/动画插值可直接用其分数做平滑，避免额外造“自定义时钟”。
     
-- **批处理与分数步长**：在需要“补算”的场景，`ClientServerTickRate` 允许同帧合并多个 Tick（批量步进）；而在预测循环内部，系统会以对应 Tick 的步长推进 ECS `TimeData`，确保“半步/四分之一步”这类**部分 Tick**的 delta 合法可用。
+- **批处理与分数步长**：在需要“补算”的场景，`ClientServerTickRate` 允许同帧合并多个 Tick（批量步进）；而在预测循环内部，系统会以对应 `Tick` 的步长推进 ECS `TimeData`，确保“半步/四分之一步”这类**部分 `Tick`** 的 `delta` 合法可用。
     
 
 此外，**输入/命令也必须与 Tick 对齐**。访问本地命令缓冲应使用 `GetDataAtTick(targetTick, out cmd)` 这类 API，把“这一刻的决策”与“这一刻的仿真”绑定到同一 Tick，避免帧驱动导致的时序偏差。

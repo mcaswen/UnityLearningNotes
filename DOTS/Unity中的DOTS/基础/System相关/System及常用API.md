@@ -15,15 +15,17 @@
 #### 二、`System`及其组归属的最佳实践
 
 - **`SimulationSystemGroup`**：适用于游戏规则、移动、`AI`、`NetCode` 预测/插值等“模拟”逻辑。所有`System`不额外指定下默认归属此组。
-- **`FixedStepSimulationSystemGroup`**：适用于需要固定步长（如物理、体测定时器）的逻辑，内部依赖固定的`DeltaTime`，多次运行来“追上”当前帧。
-- `PresentationSystemGroup`：与表现层耦合的系统（例如将`LocalToWorld`结果，渲染相关同步到表现），在`PreLateUpdate`末尾执行，避免抢占模拟时序。
 
-- **常见做法**：**模拟放在`Simulation`，渲染/桥接放在`Presentation`，物理/确定步长放在`FixedStep`**。再利用属性把System放进正确的组里，并使用`UpdateBefore`/`After`精排顺序。
+- **`FixedStepSimulationSystemGroup`**：适用于需要固定步长（如物理、体测定时器）的逻辑，内部依赖固定的`DeltaTime`，多次运行来“追上”当前帧。
+
+- **`PresentationSystemGroup`**：与表现层耦合的系统（例如将`LocalToWorld`结果，渲染相关同步到表现），在`PreLateUpdate`末尾执行，避免抢占模拟时序。
+
+- **常见做法**：**模拟放在`Simulation`，渲染/桥接放在`Presentation`，物理/确定步长放在`FixedStep`**。再利用属性把`System`放进正确的组里，并使用`UpdateBefore`/`After`精排顺序。
 
 #### 三、`System/ISystem` 的典型生命周期与”开关“
 
 - `OnCreate`：初始化查询，缓存`Lookup/Query`，或使用`state.RequireForUpdate<T>()`让系统仅再存在某组件时运行。
-- `OnUpdate`：读取/写入组件，或**调度作业**（推荐）。可使用state.Dependency汇总/串联Job依赖。
+- `OnUpdate`：读取/写入组件，或**调度作业**（推荐）。可使用`state.Dependency`汇总/串联`Job`依赖。
 - `OnDestroy`：清理原生容器等非托管资源。
 
 #### 四、常用API
