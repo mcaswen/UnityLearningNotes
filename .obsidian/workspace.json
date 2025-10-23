@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/网络同步相关/RPC.md",
+                "file": "游戏引擎原理及其应用-笔记/第9章 音频系统/9.3 声音特效.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RPC"
+              "title": "9.3 声音特效"
             }
           }
         ],
@@ -200,8 +200,16 @@
   },
   "active": "9aff452565e4539e",
   "lastOpenFiles": [
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/9. ServerTick问题.md",
+    "游戏引擎原理及其应用-笔记/第9章 音频系统/9.2 混音器.md",
+    "游戏引擎原理及其应用-笔记/第9章 音频系统/9.3 声音特效.md",
+    "游戏引擎原理及其应用-笔记/第9章 音频系统/9.1 音频基础.md",
+    "游戏引擎原理及其应用-笔记/第6章 UI系统/6.1 控件.md",
+    "游戏引擎原理及其应用-笔记/第9章 音频系统",
+    "游戏引擎原理及其应用-笔记/未命名.md",
+    "游戏引擎原理及其应用-笔记/第6章 UI系统/6.3 界面美化.md",
+    "游戏引擎原理及其应用-笔记/第6章 UI系统/6.2 界面功能实现.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/网络同步相关/RPC.md",
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/9. ServerTick问题.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施/时间轴.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/5. 预测-回滚详细流程.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/5.1 预测-回滚详细流程2.md",
@@ -220,21 +228,13 @@
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/Bootstrap及其应用.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/3.确认掩码.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/2. 外推的含义.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关/1. 压缩精度问题.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施/序列化与反序列化.md",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答/权威-预测-回滚模型相关",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/疑难解答",
-    "游戏开发中的网络同步/6. 序列化与反序列化.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/网络同步相关/PredictedSimulationSystemGroup原理.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施/NetworkTime及其应用.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施/Tick概念.md",
-    "DOTS/Unity中的DOTS/基础/其他/Aspect及其应用.md",
     "游戏引擎原理及其应用-笔记/第6章 UI系统",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/网络同步相关",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施",
     "DOTS/Unity中的DOTS/基础/Component相关",
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities"
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关"
   ]
 }
