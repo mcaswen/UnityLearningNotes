@@ -172,6 +172,14 @@
   },
   "active": "2a34c99fabb4943f",
   "lastOpenFiles": [
+    "游戏引擎原理及其应用-笔记/第13章 XR内容创作/13.1 VR.md",
+    "游戏引擎原理及其应用-笔记/第13章 XR内容创作/13.2 AR.md",
+    "游戏引擎原理及其应用-笔记/第13章 XR内容创作",
+    "游戏引擎原理及其应用-笔记/第11章 2d游戏开发/11.4 二维角色骨架系统.md",
+    "游戏引擎原理及其应用-笔记/第11章 2d游戏开发/11.2 瓦片地图 Tilemap.md",
+    "游戏引擎原理及其应用-笔记/第11章 2d游戏开发/11.3 二维角色.md",
+    "游戏引擎原理及其应用-笔记/第11章 2d游戏开发/11.1 Sprite.md",
+    "游戏引擎原理及其应用-笔记/第11章 2d游戏开发",
     "项目相关/黑地牢：抽卡/1. A星寻路算法.md",
     "项目相关/黑地牢：抽卡/2. 策略模式+工厂模式技能注册.md",
     "Pasted image 20251209022523.png",
@@ -201,13 +209,6 @@
     "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/基础设施",
     "DOTS/Unity中的DOTS/基础/其他/Lookup及其应用.md",
     "DOTS/Unity中的DOTS/基础/System相关/System及常用API.md",
-    "DOTS/Unity中的DOTS/基础/Entity相关/WithEntityAccess()及其应用.md",
-    "DOTS/Unity中的DOTS/基础/Component相关/Singleton及其应用.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/NetworkId及其应用.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/CommandTarget及其应用.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关/Bootstrap及其应用.md",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/World相关",
-    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities"
+    "DOTS/Unity中的DOTS/网络同步 Netcode For Entities/客户端-服务端互联相关"
   ]
 }
